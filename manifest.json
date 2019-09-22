@@ -1,0 +1,48 @@
+{
+	"name": "Carousell Listing Stripper",
+	"version": "1.0",
+	"description": "Carousell Listing Stripper - Download Your Listings from Carousell!",
+
+	"permissions": [
+		"tabs",
+		"activeTab",
+		"declarativeContent",
+		"storage",
+		"downloads",
+
+		"https://sg.carousell.com/p/*"
+	],
+
+	"background": {
+		"scripts": [ "background.js" ],
+		"persistent": false
+	},
+
+	"page_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "images/icon16.png",
+			"32": "images/icon32.png",
+			"64": "images/icon64.png",
+			"128": "images/icon128.png",
+			"1024": "images/icon1024.png"
+		}
+	},
+
+	"content_scripts": [
+		{
+			"matches": [ "https://sg.carousell.com/*" ],
+			"js": [ "js/content.js", "js/jquery-3.4.1.min.js" ]
+		}
+	],
+
+	"icons": {
+		"16": "images/icon16.png",
+		"32": "images/icon32.png",
+		"64": "images/icon64.png",
+		"128": "images/icon128.png",
+		"1024": "images/icon1024.png"
+	},
+
+	"manifest_version": 2
+}

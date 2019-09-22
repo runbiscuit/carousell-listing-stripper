@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			html, body {
+				margin: 0;
+			}
+
+			* {
+				font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Droid Sans, Helvetica Neue, sans-serif;
+				color: #57585a;
+				text-align: center;
+			}
+
+			h1 {
+				margin: 0;
+				margin-bottom: 20px;
+			}
+
+			h3 {
+				margin-top: 0;
+				font-size: 1.5em;
+			}
+
+			body {
+				width: 350px;
+				margin: 20px 50px;
+			}
+
+			button {
+			    margin: 0 5px;
+			    padding: 8px 16px;
+			    border-radius: 4px;
+				background-color: #ff2636;
+				border: 0;
+				cursor: pointer;
+				transition: background-color .25s ease-in-out;
+				outline: none;
+			}
+
+			button:hover, button:active, button:focus {
+				background-color: #cc1e2b;
+			}
+
+			button:focus {
+				box-shadow: 0 0 0 4px #ffd4d7;
+			}
+
+			button span {
+				color: white;
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 1.5;
+			}
+
+			section.log {
+				background-color: #04080F;
+			}
+
+			section.log * {
+				color: white;
+				font-family: 'Courier New';
+			}
+
+			hr {
+				border-bottom-width: 0.5px;
+				border-bottom-color: #57585a;
+				margin: 20px 0;
+			}
+
+			.textareas {
+				position: absolute;
+				right: -100vw;
+				top: -100vh;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Carousell Listing Downloader</h1>
+		</header>
+		
+		<section>
+			<h3>Listing</h3>
+			<button class="copy copyTitle" data-clipboard-target="#title"><span>Copy Title</span></button>
+			<button class="copy copyDescription" data-clipboard-target="#description"><span>Copy Description</span></button>
+
+			<div class="textareas">
+				<textarea name="title" id="title"></textarea>
+				<textarea name="description" id="description"></textarea>
+			</div>
+
+			<hr>
+
+			<h3>Images</h3>
+			<button class="downloadImages"><span>Download</span></button>
+		</section>
+
+		<footer>
+
+		</footer>
+
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/popup.js"></script>
+	</body>
+</html>
