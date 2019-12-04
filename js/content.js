@@ -4,8 +4,8 @@ var parameters = [];
 
 window.onload = (function(event) {
 	// get the listing title
-	var title = $('.styles__titleWrapper___3jSxG h1').text();
-	var description = $('.styles__textTruncate___2Mx1R p').text();
+	var title = $($('._3jSxGs6DS1 h1')[0]).text();
+	var description = $($('._2Mx1RsPDTF p')[0]).text();
 
 	chrome.storage.local.set({
 		title: title,
@@ -20,7 +20,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 			var downloads = [];
 
 			// start looking for the images
-			$.each($('.styles__selectablePhotos___10FMd > button > img'), function(index, el) {
+			$.each($('._1-pzxhqYDt > button > img'), function(index, el) {
 			    // figure out the file type of the file
 			    var url = $(el).attr('src');
 
@@ -40,7 +40,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 			    	}
 			    });
 
-			    if ($('.styles__selectablePhotos___10FMd > button > img').length - 1 == index) {
+			    if ($('._1-pzxhqYDt > button > img').length - 1 == index) {
 					// return the download
 					sendResponse({ action: "initiate_download", downloads: downloads });
 			    }
