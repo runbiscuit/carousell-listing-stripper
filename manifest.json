@@ -1,6 +1,6 @@
 {
 	"name": "Carousell Listing Stripper",
-	"version": "1.0",
+	"version": "1.1",
 	"description": "Carousell Listing Stripper - Download Your Listings from Carousell!",
 
 	"permissions": [
@@ -10,15 +10,17 @@
 		"storage",
 		"downloads",
 
+		"https://*.carousell.com/p/*"
 	],
 
+	/* background scripts can only access the extension. */
 	"background": {
-		"scripts": [ "background.js" ],
+		"scripts": [ "js/extension/background.js", "js/shared/jquery-3.4.1.min.js" ],
 		"persistent": false
 	},
 
 	"page_action": {
-		"default_popup": "popup.html",
+		"default_popup": "html/popup.html",
 		"default_icon": {
 			"16": "images/icon16.png",
 			"32": "images/icon32.png",
@@ -28,10 +30,11 @@
 		}
 	},
 
+	/* content scripts will be added into the page itself. */
 	"content_scripts": [
 		{
 			"matches": [ "https://*.carousell.com/*" ],
-			"js": [ "js/content.js", "js/jquery-3.4.1.min.js" ]
+			"js": [ "js/content/_functions.js", "js/content/content.js", "js/shared/jquery-3.4.1.min.js" ]
 		}
 	],
 

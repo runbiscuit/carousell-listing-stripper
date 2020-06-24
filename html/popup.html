@@ -81,26 +81,38 @@
 		</header>
 		
 		<section>
-			<h3>Listing</h3>
-			<button class="copy copyTitle" data-clipboard-target="#title"><span>Copy Title</span></button>
-			<button class="copy copyDescription" data-clipboard-target="#description"><span>Copy Description</span></button>
+			<h3>Listing Actions</h3>
 
-			<div class="textareas">
-				<textarea name="title" id="title"></textarea>
-				<textarea name="description" id="description"></textarea>
-			</div>
+			<button class="copy" data-action="copy" data-key="title"><span>Copy Title</span></button>
+			<button class="copy" data-action="copy" data-key="description"><span>Copy Description</span></button>
 
 			<hr>
 
-			<h3>Images</h3>
-			<button class="downloadImages"><span>Download</span></button>
+			<h3>Image Actions</h3>
+			<button class="download" data-action="download" data-key="images"><span>Download</span></button>
+
+			<!--
+				<hr>
+
+				<h3>Auto-Download Actions</h3>
+
+				<p>This is an experimental feature that allows for the copying & downloading of a listing information, and closes the listing promptly.</p>
+				<p>This feature is meant for listing archival purposes.</p>
+
+				<input type="checkbox" name="auto-download">
+			-->
 		</section>
 
 		<footer>
-
+			<p>
+				<a target="_blank" href="https://support.carousell.com/hc/en-us/articles/360025850993">Relisting often is bad for the community!</a>
+				<br><br>
+				Copyright &copy; 2019-2020 <a target="_blank" href="https://theroyalstudent.com">Edwin A.</a>, usage of this extension is at your own risk.
+			</p>
 		</footer>
 
-		<script src="js/jquery-3.4.1.min.js"></script>
-		<script src="js/popup.js"></script>
+		<script src="../js/shared/jquery-3.4.1.min.js"></script>
+		<script src="../js/content/_functions.js"></script>
+		<script src="../js/extension/popup.js"></script>
 	</body>
 </html>
