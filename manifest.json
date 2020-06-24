@@ -10,7 +10,6 @@
 		"storage",
 		"downloads",
 
-		"https://sg.carousell.com/p/*"
 	],
 
 	"background": {
@@ -31,7 +30,7 @@
 
 	"content_scripts": [
 		{
-			"matches": [ "https://sg.carousell.com/*" ],
+			"matches": [ "https://*.carousell.com/*" ],
 			"js": [ "js/content.js", "js/jquery-3.4.1.min.js" ]
 		}
 	],
